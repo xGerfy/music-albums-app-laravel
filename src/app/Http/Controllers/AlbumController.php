@@ -7,12 +7,11 @@ use Illuminate\Http\Request;
 
 class AlbumController extends Controller
 {
-
-    public function index(request $request)
+    public function index(Request $request)
     {
-
         $query = Album::query();
 
+        // Поиск по названию или исполнителю
         if ($request->filled('search')) {
             $search = $request->search;
             $query->where(function ($q) use ($search) {
@@ -28,6 +27,7 @@ class AlbumController extends Controller
 
     public function create()
     {
+        // Перенаправляем на форму редактирования с ID=null
         return redirect()->route('albums.edit', ['album' => 'new']);
     }
 

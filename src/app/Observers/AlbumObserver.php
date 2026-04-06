@@ -8,9 +8,6 @@ use Illuminate\Support\Facades\Auth;
 
 class AlbumObserver
 {
-    /**
-     * Handle the Album "created" event.
-     */
     public function created(Album $album): void
     {
         AlbumLog::create([
@@ -21,9 +18,6 @@ class AlbumObserver
         ]);
     }
 
-    /**
-     * Handle the Album "updated" event.
-     */
     public function updated(Album $album): void
     {
         $changes = $album->getChanges();
@@ -41,9 +35,6 @@ class AlbumObserver
         ]);
     }
 
-    /**
-     * Handle the Album "deleted" event.
-     */
     public function deleted(Album $album): void
     {
         AlbumLog::create([
@@ -54,17 +45,11 @@ class AlbumObserver
         ]);
     }
 
-    /**
-     * Handle the Album "restored" event.
-     */
     public function restored(Album $album): void
     {
         //
     }
 
-    /**
-     * Handle the Album "force deleted" event.
-     */
     public function forceDeleted(Album $album): void
     {
         //
