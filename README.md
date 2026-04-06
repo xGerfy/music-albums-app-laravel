@@ -76,6 +76,11 @@ http://localhost
 ## Структура проекта
 
 ```
+docker/
+├──nginx                        # конфигурация для nginx
+├──php                          # php dockerfile для сборки образа
+├──.env                         # .env для докера
+└──docker-compose.yaml          # Docker compose файл для сборки
 src/
 ├── app/
 │   ├── Http/Controllers/       # Контроллеры
