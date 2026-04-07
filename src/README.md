@@ -32,7 +32,7 @@
 
 ```bash
 git clone github.com/xGerfy/music-albums-app-laravel
-cd "laravel test"
+cd "music albums app laravel"
 ```
 
 ### 2. Запустить Docker
